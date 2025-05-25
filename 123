@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TimeGuard | Профессиональные виртуальные помощники</title>
+    <meta name="description" content="Профессиональные услуги виртуального помощника для бизнеса. Освободите своё время для важных задач!">
     <style>
-        /* Основные стили */
         :root {
             --primary: #4361ee;
             --secondary: #3f37c9;
@@ -26,7 +26,7 @@
         
         header {
             background: linear-gradient(rgba(67, 97, 238, 0.9), rgba(63, 55, 201, 0.9)), 
-                        url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+                        url('images/office-bg.jpg') center/cover;
             color: white;
             padding: 80px 20px;
             text-align: center;
@@ -131,7 +131,7 @@
         
         .testimonials {
             background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
-                        url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+                        url('images/testimonials-bg.jpg') center/cover;
             background-attachment: fixed;
             padding: 80px 0;
         }
@@ -254,6 +254,7 @@
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -268,7 +269,7 @@
         <h2 class="section-title">О нас</h2>
         <div style="text-align: center; max-width: 800px; margin: 0 auto;">
             <p>TimeGuard - это команда профессиональных виртуальных помощников, которые становятся вашими надежными партнерами в бизнесе. Мы берем на себя рутинные задачи, чтобы вы могли сосредоточиться на стратегически важных аспектах развития вашей компании.</p>
-            <p>Наш основатель - <a href="https://t.me/lsnk05" style="color: var(--primary); font-weight: bold; text-decoration: none;">@lsnk05</a>, эксперт в организации бизнес-процессов с более чем 5-летним опытом работы с предпринимателями и малым бизнесом.</p>
+            <p>Наш основатель - <a href="https://t.me/lsnk05" style="color: var(--primary); font-weight: bold; text-decoration: none;">@your_telegram</a>, эксперт в организации бизнес-процессов с более чем 5-летним опытом работы с предпринимателями и малым бизнесом.</p>
         </div>
     </section>
     
@@ -309,18 +310,18 @@
             <h2 class="section-title" style="color: white;">Отзывы клиентов</h2>
             <blockquote>
                 <p>Благодаря TimeGuard я смог сосредоточиться на развитии своего ресторанного бизнеса, в то время как команда профессионалов взяла на себя все административные задачи. За 2 месяца сотрудничества мы увеличили выручку на 10%, во многом благодаря освободившемуся времени на стратегическое планирование.</p>
-                <cite>— Смирнова Ольга</cite>
+                <cite>— Смирнов Владимир</cite>
             </blockquote>
             <blockquote>
-                <p>Как онлайн-коучу, мне было критически важно освободить время от рутины. TimeGuard не просто выполняют задачи, а действительно понимают специфику моего бизнеса. Особенно ценю их проактивный подход - они часто предлагают решения до того, как я сам осознаю проблему.</p>
-                <cite>— Мария Сидорова</cite>
+                <p>Мне было критически важно освободить время от рутины. TimeGuard не просто выполняют задачи, а действительно понимают специфику моего бизнеса. Особенно ценю их проактивный подход - они часто предлагают решения до того, как я сам осознаю проблему.</p>
+                <cite>— Морозова Ольга </cite>
             </blockquote>
         </div>
     </section>
     
     <section id="contact" class="container">
         <h2 class="section-title">Свяжитесь с нами</h2>
-        <form action="https://formspree.io/f/ваша_форма" method="POST">
+        <form action="https://formspree.io/f/your_form_id" method="POST">
             <div class="form-group">
                 <label for="name">Ваше имя</label>
                 <input type="text" id="name" name="name" required placeholder="Как к вам обращаться?">
@@ -346,10 +347,10 @@
             <h3>TimeGuard</h3>
             <p>Ваш надежный партнер в бизнесе</p>
             <div class="social-links">
-                <a href="https://t.me/ваш_телеграм" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="https://t.me/Lsnk05" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
                 <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 <a href="#" aria-label="VKontakte"><i class="fab fa-vk"></i></a>
-                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:givirlax@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
             <p>© 2024 TimeGuard. Все права защищены.</p>
         </div>
