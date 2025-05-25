@@ -26,6 +26,7 @@
         
         header {
             background: linear-gradient(rgba(67, 97, 238, 0.9), rgba(63, 55, 201, 0.9)), 
+                        url('images/office-bg.jpg') center/cover;
             color: white;
             padding: 80px 20px;
             text-align: center;
@@ -130,6 +131,7 @@
         
         .testimonials {
             background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
+                        url('images/testimonials-bg.jpg') center/cover;
             background-attachment: fixed;
             padding: 80px 0;
         }
