@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeGuard | Профессиональные виртуальные помощники</title>
+    <style>
+        /* Основные стили */
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --accent: #4895ef;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(rgba(67, 97, 238, 0.9), rgba(63, 55, 201, 0.9)), 
+                        url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin: 20px 0 40px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 15px 40px;
+            margin: 20px 0;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(72, 149, 239, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(72, 149, 239, 0.6);
+            background-color: #3a86e0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            color: var(--secondary);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+        
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .service {
+            flex: 1 1 300px;
+            max-width: 350px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        
+        .testimonials {
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
+                        url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            background-attachment: fixed;
+            padding: 80px 0;
+        }
+        
+        blockquote {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+        
+        blockquote:before {
+            content: '"';
+            font-size: 5rem;
+            color: rgba(67, 97, 238, 0.1);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            line-height: 1;
+        }
+        
+        blockquote p {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin: 0 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        cite {
+            font-weight: bold;
+            color: var(--secondary);
+            font-style: normal;
+        }
+        
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(72, 149, 239, 0.2);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            color: white;
+            background: rgba(255,255,255,0.1);
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            margin: 0 10px;
+            transition: background 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            header {
+                padding: 60px 20px;
+                clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+            }
+            
+            .service {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TimeGuard</h1>
+            <p class="tagline">Профессиональные виртуальные помощники для вашего бизнеса</p>
+            <a href="#contact" class="cta-button">Начать сотрудничество</a>
+        </div>
+    </header>
+    
+    <section id="about" class="container">
+        <h2 class="section-title">О нас</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p>TimeGuard - это команда профессиональных виртуальных помощников, которые становятся вашими надежными партнерами в бизнесе. Мы берем на себя рутинные задачи, чтобы вы могли сосредоточиться на стратегически важных аспектах развития вашей компании.</p>
+            <p>Наш основатель - <a href="https://t.me/lsnk05" style="color: var(--primary); font-weight: bold; text-decoration: none;">@lsnk05</a>, эксперт в организации бизнес-процессов с более чем 5-летним опытом работы с предпринимателями и малым бизнесом.</p>
+        </div>
+    </section>
+    
+    <section id="services" class="container">
+        <h2 class="section-title">Наши услуги</h2>
+        <div class="services">
+            <div class="service">
+                <div class="service-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Административная поддержка</h3>
+                <p>Полное сопровождение вашей деловой переписки, организация встреч и управление календарем, бронирование билетов и отелей, напоминания о важных событиях.</p>
+                <p><strong>От 5 000 руб./мес</strong></p>
+            </div>
+            
+            <div class="service">
+                <div class="service-icon">
+                    <i class="fas fa-hashtag"></i>
+                </div>
+                <h3>Ведение соцсетей</h3>
+                <p>Создание контент-плана, подготовка и публикация постов, взаимодействие с аудиторией, аналитика эффективности, работа с хештегами и геометками.</p>
+                <p><strong>От 8 000 руб./мес</strong></p>
+            </div>
+            
+            <div class="service">
+                <div class="service-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3>Работа с документами</h3>
+                <p>Ведение таблиц и баз данных, подготовка отчетов и презентаций, транскрибация аудио и видео, систематизация файлов и облачного хранилища.</p>
+                <p><strong>От 3 000 руб./мес</strong></p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Отзывы клиентов</h2>
+            <blockquote>
+                <p>Благодаря TimeGuard я смог сосредоточиться на развитии своего ресторанного бизнеса, в то время как команда профессионалов взяла на себя все административные задачи. За 2 месяца сотрудничества мы увеличили выручку на 10%, во многом благодаря освободившемуся времени на стратегическое планирование.</p>
+                <cite>— Смирнова Ольга</cite>
+            </blockquote>
+            <blockquote>
+                <p>Как онлайн-коучу, мне было критически важно освободить время от рутины. TimeGuard не просто выполняют задачи, а действительно понимают специфику моего бизнеса. Особенно ценю их проактивный подход - они часто предлагают решения до того, как я сам осознаю проблему.</p>
+                <cite>— Мария Сидорова</cite>
+            </blockquote>
+        </div>
+    </section>
+    
+    <section id="contact" class="container">
+        <h2 class="section-title">Свяжитесь с нами</h2>
+        <form action="https://formspree.io/f/ваша_форма" method="POST">
+            <div class="form-group">
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name" name="name" required placeholder="Как к вам обращаться?">
+            </div>
+            <div class="form-group">
+                <label for="email">Ваш email</label>
+                <input type="email" id="email" name="email" required placeholder="example@mail.com">
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон (необязательно)</label>
+                <input type="tel" id="phone" name="phone" placeholder="+7 (XXX) XXX-XX-XX">
+            </div>
+            <div class="form-group">
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Расскажите о ваших задачах..."></textarea>
+            </div>
+            <button type="submit" class="cta-button" style="border: none; cursor: pointer; width: 100%;">Отправить заявку</button>
+        </form>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <h3>TimeGuard</h3>
+            <p>Ваш надежный партнер в бизнесе</p>
+            <div class="social-links">
+                <a href="https://t.me/ваш_телеграм" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" aria-label="VKontakte"><i class="fab fa-vk"></i></a>
+                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>© 2024 TimeGuard. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
